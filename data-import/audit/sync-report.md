@@ -1,6 +1,6 @@
 # Diamond League Sync Report
 
-- Synced at: 2026-05-26T14:48:35.227Z
+- Synced at: 2026-05-28T11:43:22.189Z
 - Generated files: no
 - Existing results: 107
 - New competitions: 0
