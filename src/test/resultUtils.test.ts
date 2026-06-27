@@ -2,10 +2,16 @@ import { describe, it, expect } from 'vitest'
 import {
   sortResultsByDateDesc,
   getResultsByAthleteId,
+  getLatestResultByAthleteId,
+  getLatestResultsByAthleteId,
+  getAthleteDisplayLatestResult,
   getResultsByEvent,
+  getResultsByCompetition,
+  getVerifiedResults,
+  getPendingResults,
   getResultsFreshnessStatus,
 } from '../domain/athletics/resultUtils'
-import type { CompetitionResult, DataMeta } from '../domain/athletics/types'
+import type { CompetitionResult, DataMeta, Athlete } from '../domain/athletics/types'
 
 describe('resultUtils', () => {
   const mockResults: CompetitionResult[] = [
@@ -115,6 +121,70 @@ describe('resultUtils', () => {
     })
   })
 
+  describe('getLatestResultByAthleteId', () => {
+    it('should return the most recent result for an athlete', () => {
+      const latest = getLatestResultByAthleteId(mockResults, 'athlete-1')
+      expect(latest).toBeDefined()
+      expect(latest!.date).toBe('2024-06-15')
+      expect(latest!.athleteId).toBe('athlete-1')
+    })
+
+    it('should return undefined for non-existent athlete', () => {
+      const latest = getLatestResultByAthleteId(mockResults, 'non-existent')
+      expect(latest).toBeUndefined()
+    })
+  })
+
+  describe('getLatestResultsByAthleteId', () => {
+    it('should return limited results for an athlete', () => {
+      const results = getLatestResultsByAthleteId(mockResults, 'athlete-1', 1)
+      expect(results).toHaveLength(1)
+      expect(results[0].date).toBe('2024-06-15')
+    })
+
+    it('should return all results if limit is higher than available', () => {
+      const results = getLatestResultsByAthleteId(mockResults, 'athlete-1', 10)
+      expect(results).toHaveLength(2)
+    })
+  })
+
+  describe('getAthleteDisplayLatestResult', () => {
+    it('should return the latest result for display', () => {
+      const athlete: Pick<Athlete, 'id' | 'englishName' | 'name'> = {
+        id: 'athlete-1',
+        name: '苏炳添',
+        englishName: 'Su Bingtian',
+      }
+      const result = getAthleteDisplayLatestResult(athlete, mockResults)
+      expect(result).toBeDefined()
+      expect(result!.date).toBe('2024-06-15')
+    })
+  })
+
+  describe('getResultsByCompetition', () => {
+    it('should return results for a specific competition', () => {
+      const results = getResultsByCompetition(mockResults, 'diamond-league-shanghai')
+      expect(results).toHaveLength(2)
+      expect(results.every(r => r.competitionSlug === 'diamond-league-shanghai')).toBe(true)
+    })
+  })
+
+  describe('getVerifiedResults', () => {
+    it('should return only verified results', () => {
+      const verified = getVerifiedResults(mockResults)
+      expect(verified).toHaveLength(2)
+      expect(verified.every(r => r.source.verified === 'verified')).toBe(true)
+    })
+  })
+
+  describe('getPendingResults', () => {
+    it('should return only pending results', () => {
+      const pending = getPendingResults(mockResults)
+      expect(pending).toHaveLength(1)
+      expect(pending[0].source.verified).toBe('pending')
+    })
+  })
+
   describe('getResultsFreshnessStatus', () => {
     it('should return fresh for recent data', () => {
       const dataMeta: DataMeta = {
@@ -136,6 +206,18 @@ describe('resultUtils', () => {
         recommendedSources: [],
       }
       expect(getResultsFreshnessStatus(dataMeta)).toBe('stale')
+    })
+
+    it('should return aging for moderately old data', () => {
+      const agingDate = new Date()
+      agingDate.setDate(agingDate.getDate() - 45)
+      const dataMeta: DataMeta = {
+        lastAutoSync: agingDate.toISOString(),
+        lastManualUpdate: agingDate.toISOString(),
+        dataPolicy: 'test',
+        recommendedSources: [],
+      }
+      expect(getResultsFreshnessStatus(dataMeta)).toBe('aging')
     })
   })
 })

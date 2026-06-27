@@ -1,8 +1,8 @@
 import { useState, useCallback } from 'react';
 import { competitionResults, dataMeta } from '../data';
-import DataFreshnessBadge from '../components/DataFreshnessBadge';
-import type { CompetitionResult } from '../domain/athletics/types';
-import { validateCompetitionResult } from '../domain/athletics/validation';
+import DataFreshnessBadge from '../components/data/DataFreshnessBadge';
+import type { CompetitionResult } from '../data';
+import { validateCompetitionResult } from '../data';
 
 interface ValidationError {
   id: string;

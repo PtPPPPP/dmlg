@@ -15,14 +15,13 @@
     "data:normalize": "tsx scripts/data/normalize-results.ts",
     "data:validate": "tsx scripts/data/validate-results.ts",
     "data:meta": "tsx scripts/data/generate-data-meta.ts",
+    "images:optimize": "tsx scripts/images/optimize-athlete-images.ts",
     "check": "npm run data:validate && npm run build"
   },
   "dependencies": {
-    "cheerio": "^1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.0",
-    "recharts": "^2.12.7"
+    "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -33,12 +32,14 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
+    "cheerio": "^1.2.0",
     "eslint": "^10.4.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "jsdom": "^29.1.1",
     "postcss": "^8.4.39",
+    "sharp": "^0.35.1",
     "tailwindcss": "^3.4.6",
     "tsx": "^4.22.3",
     "typescript": "^5.5.3",

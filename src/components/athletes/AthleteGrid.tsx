@@ -1,4 +1,5 @@
-import type { Athlete } from '../../types';
+import { memo } from 'react';
+import type { Athlete } from '../../data';
 import AthleteCard from './AthleteCard';
 
 interface AthleteGridProps {
@@ -7,7 +8,7 @@ interface AthleteGridProps {
   onToggleFavorite: (id: string) => void;
 }
 
-export default function AthleteGrid({
+function AthleteGrid({
   athletes,
   isFavorite,
   onToggleFavorite,
@@ -25,4 +26,6 @@ export default function AthleteGrid({
     </div>
   );
 }
+
+export default memo(AthleteGrid);
 

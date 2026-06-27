@@ -1,10 +1,12 @@
+import { memo } from 'react';
+
 interface SearchBoxProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
 }
 
-export default function SearchBox({
+function SearchBox({
   value,
   onChange,
   placeholder = '搜索运动员姓名、国家、项目...',
@@ -44,3 +46,5 @@ export default function SearchBox({
     </div>
   );
 }
+
+export default memo(SearchBox);

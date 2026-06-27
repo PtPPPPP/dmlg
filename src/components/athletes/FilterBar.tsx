@@ -1,5 +1,5 @@
-import type { EventCategory } from '../../types';
-import { EVENT_CATEGORY_TAG_CLASS } from '../../types';
+import { EVENT_CATEGORY_TAG_CLASS, EVENT_CATEGORY_LABELS, trackEvents } from '../../data';
+import type { EventCategory } from '../../data';
 
 interface FilterBarProps {
   selectedCategory: EventCategory | 'all';
@@ -13,13 +13,17 @@ interface FilterBarProps {
   onShowFavoritesChange: (show: boolean) => void;
 }
 
+// 只显示有实际项目的类别
+const categoriesWithEvents = new Set(trackEvents.map((e) => e.category));
+
 const CATEGORIES: Array<{ value: EventCategory | 'all'; label: string }> = [
   { value: 'all', label: '全部' },
-  { value: 'sprint', label: '短跑' },
-  { value: 'distance', label: '中长跑' },
-  { value: 'hurdle', label: '跨栏' },
-  { value: 'jump', label: '跳跃' },
-  { value: 'throw', label: '投掷' },
+  ...Object.entries(EVENT_CATEGORY_LABELS)
+    .filter(([key]) => categoriesWithEvents.has(key as EventCategory))
+    .map(([value, label]) => ({
+      value: value as EventCategory,
+      label,
+    })),
 ];
 
 export default function FilterBar({

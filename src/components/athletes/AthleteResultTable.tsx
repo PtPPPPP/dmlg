@@ -1,4 +1,4 @@
-import type { CompetitionResult } from '../../domain/athletics/types';
+import type { CompetitionResult } from '../../data';
 import { Badge } from '../ui/Badge';
 import { EmptyState } from '../ui/EmptyState';
 import { SourceLink } from '../data/SourceLink';

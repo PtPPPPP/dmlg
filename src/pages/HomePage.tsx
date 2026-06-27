@@ -1,7 +1,8 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import HeroSection from '../components/HeroSection';
+import HeroSection from '../components/layout/HeroSection';
 import AthleteGrid from '../components/athletes/AthleteGrid';
-import DataFreshnessBadge from '../components/DataFreshnessBadge';
+import DataFreshnessBadge from '../components/data/DataFreshnessBadge';
 import { athletes, dataMeta } from '../data';
 import { useFavorites } from '../hooks/useFavorites';
 
@@ -23,7 +24,11 @@ const ENTRY_LINKS = [
 
 export default function Home() {
   const { isFavorite, toggleFavorite } = useFavorites();
-  const featured = FEATURED_IDS.map((id) => athletes.find((a) => a.id === id)).filter(Boolean) as typeof athletes;
+  // 缓存推荐运动员列表，避免每次渲染重新查找
+  const featured = useMemo(
+    () => FEATURED_IDS.map((id) => athletes.find((a) => a.id === id)).filter(Boolean) as typeof athletes,
+    []
+  );
 
   return (
     <div>

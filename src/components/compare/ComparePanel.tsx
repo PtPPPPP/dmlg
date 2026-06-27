@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
-import type { Athlete, StyleProfileKey } from '../../types';
-import { STYLE_LABELS } from '../../types';
-import RadarChart from '../ui/RadarChart';
-import { competitionResults } from '../../data';
 import {
+  competitionResults,
   getLatestResultsByAthleteId,
   getTaggedResultsByAthleteId,
-} from '../../domain/athletics/resultUtils';
+  STYLE_LABELS,
+} from '../../data';
+import type { Athlete, StyleProfileKey } from '../../data';
+import RadarChart from '../ui/RadarChart';
 import { SourceLink } from '../data/SourceLink';
 import { VerificationBadge } from '../data/VerificationBadge';
 import { EmptyState } from '../ui/EmptyState';
+import AthleteImage from '../athletes/AthleteImage';
 
 interface ComparePanelProps {
   athlete1: Athlete;
@@ -146,9 +147,11 @@ export default function ComparePanel({ athlete1, athlete2 }: ComparePanelProps) 
     <div className="grid gap-6 lg:grid-cols-2">
       <div className="glass-card p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-500/30 to-brand-700/30 text-lg font-bold text-white ring-2 ring-brand-500/30">
-            {athlete1.name.slice(0, 2)}
-          </div>
+          <AthleteImage
+            athlete={athlete1}
+            variant="compare"
+            className="h-14 w-14 flex-shrink-0"
+          />
           <div>
             <h2 className="text-xl font-bold text-white">{athlete1.name}</h2>
             <p className="text-sm text-slate-400">
@@ -188,9 +191,11 @@ export default function ComparePanel({ athlete1, athlete2 }: ComparePanelProps) 
 
       <div className="glass-card p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-track-gold/30 to-amber-700/30 text-lg font-bold text-white ring-2 ring-track-gold/30">
-            {athlete2.name.slice(0, 2)}
-          </div>
+          <AthleteImage
+            athlete={athlete2}
+            variant="compare"
+            className="h-14 w-14 flex-shrink-0"
+          />
           <div>
             <h2 className="text-xl font-bold text-white">{athlete2.name}</h2>
             <p className="text-sm text-slate-400">

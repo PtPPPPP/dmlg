@@ -1,16 +1,19 @@
 import { useState, useMemo } from 'react';
-import type { EventCategory } from '../types';
-import { EVENT_CATEGORY_LABELS } from '../types';
-import { trackEvents } from '../data';
-import EventCard from '../components/EventCard';
+import { trackEvents, EVENT_CATEGORY_LABELS } from '../data';
+import type { EventCategory } from '../data';
+import EventCard from '../components/events/EventCard';
+
+// 只显示有实际项目的类别
+const categoriesWithEvents = new Set(trackEvents.map((e) => e.category));
 
 const CATEGORIES: Array<{ value: EventCategory | 'all'; label: string }> = [
   { value: 'all', label: '全部项目' },
-  { value: 'sprint', label: '短跑' },
-  { value: 'distance', label: '中长跑' },
-  { value: 'hurdle', label: '跨栏' },
-  { value: 'jump', label: '跳跃' },
-  { value: 'throw', label: '投掷' },
+  ...Object.entries(EVENT_CATEGORY_LABELS)
+    .filter(([key]) => categoriesWithEvents.has(key as EventCategory))
+    .map(([value, label]) => ({
+      value: value as EventCategory,
+      label,
+    })),
 ];
 
 export default function Events() {

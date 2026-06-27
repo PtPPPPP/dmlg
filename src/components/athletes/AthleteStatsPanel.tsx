@@ -1,6 +1,6 @@
-import type { CompetitionResult } from '../../domain/athletics/types';
-import type { Athlete } from '../../types';
-import { getTaggedResultsByAthleteId } from '../../domain/athletics/resultUtils';
+import { memo } from 'react';
+import { getTaggedResultsByAthleteId } from '../../data';
+import type { CompetitionResult, Athlete } from '../../data';
 import StatBadge from './StatBadge';
 
 interface AthleteStatsPanelProps {
@@ -8,7 +8,7 @@ interface AthleteStatsPanelProps {
   results: CompetitionResult[];
 }
 
-export default function AthleteStatsPanel({ athlete, results }: AthleteStatsPanelProps) {
+function AthleteStatsPanel({ athlete, results }: AthleteStatsPanelProps) {
   const pb = getTaggedResultsByAthleteId(results, athlete, 'PB')[0];
   const sb = getTaggedResultsByAthleteId(results, athlete, 'SB')[0];
 
@@ -34,4 +34,6 @@ export default function AthleteStatsPanel({ athlete, results }: AthleteStatsPane
     </div>
   );
 }
+
+export default memo(AthleteStatsPanel);
 

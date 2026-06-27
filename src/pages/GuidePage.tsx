@@ -1,4 +1,4 @@
-export default function Guide() {
+export default function GuidePage() {
   return (
     <div className="pt-20 pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

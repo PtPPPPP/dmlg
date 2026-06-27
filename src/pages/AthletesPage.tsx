@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
-import type { EventCategory } from '../types';
+import type { EventCategory } from '../data';
 import { athletes, getAllCountries, searchAthletes, getEventsByCategory } from '../data';
 import { useFavorites } from '../hooks/useFavorites';
 import AthleteGrid from '../components/athletes/AthleteGrid';
-import FilterBar from '../components/FilterBar';
-import SearchBox from '../components/SearchBox';
+import FilterBar from '../components/athletes/FilterBar';
+import SearchBox from '../components/athletes/SearchBox';
 import { EmptyState } from '../components/ui/EmptyState';
 
 export default function Athletes() {

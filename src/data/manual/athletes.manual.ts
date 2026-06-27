@@ -10,7 +10,7 @@
  * source 字段用于记录数据来源链接
  */
 
-import type { Athlete } from '../../types';
+import type { Athlete } from '../../domain/athletics/types';
 import { newAthletes } from './athletes.extra.manual';
 
 export const athletes: Athlete[] = [
@@ -19,6 +19,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'noah-lyles',
+    avatar: '/images/athletes/noah-lyles.webp',
+    image: {
+      src: '/images/athletes/noah-lyles.webp',
+      alt: 'Noah Lyles athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Noah%20Lyles',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '诺亚·莱尔斯',
     englishName: 'Noah Lyles',
     country: '美国',
@@ -29,12 +38,12 @@ export const athletes: Athlete[] = [
     mainEvent: '200m',
     tags: ['百米飞人', '200米之王', '张扬个性'],
     personalBest: [
-      { event: '100m', result: '9.79s', date: '2024', location: '巴黎' },
-      { event: '200m', result: '19.31s', date: '2022', location: '尤金' },
+      { event: '100m', result: '9.79s', date: '2024-08-04', location: '巴黎' },
+      { event: '200m', result: '19.31s', date: '2022-07-21', location: '尤金' },
     ],
     seasonBest: [
-      { event: '100m', result: '9.79s', year: 2024 },
-      { event: '200m', result: '19.53s', year: 2024 },
+      { event: '100m', result: '9.95s', year: 2026 },
+      { event: '200m', result: '19.91s', year: 2026 },
     ],
     diamondLeagueHighlights: [
       '多次钻石联赛 200m 冠军',
@@ -74,6 +83,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'fred-kerley',
+    avatar: '/images/athletes/fred-kerley.webp',
+    image: {
+      src: '/images/athletes/fred-kerley.webp',
+      alt: 'Fred Kerley athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Fred%20Kerley',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '弗雷德·克尔利',
     englishName: 'Fred Kerley',
     country: '美国',
@@ -84,9 +102,9 @@ export const athletes: Athlete[] = [
     mainEvent: '100m',
     tags: ['全能短跑', '四百转百米', '力量型'],
     personalBest: [
-      { event: '100m', result: '9.76s', date: '2022', location: '尤金' },
-      { event: '200m', result: '19.76s' },
-      { event: '400m', result: '43.64s' },
+      { event: '100m', result: '9.76s', date: '2022-06-24', location: '尤金' },
+      { event: '200m', result: '19.76s', date: '2021-06-27' },
+      { event: '400m', result: '43.64s', date: '2019-04-27' },
     ],
     seasonBest: [{ event: '100m', result: '9.81s', year: 2024 }],
     diamondLeagueHighlights: [
@@ -125,6 +143,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'sha-carri-richardson',
+    avatar: '/images/athletes/sha-carri-richardson.webp',
+    image: {
+      src: '/images/athletes/sha-carri-richardson.webp',
+      alt: 'Sha\'Carri Richardson athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Sha%27Carri%20Richardson',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '莎卡里·理查德森',
     englishName: "Sha'Carri Richardson",
     country: '美国',
@@ -177,6 +204,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'shelly-ann-fraser-pryce',
+    avatar: '/images/athletes/shelly-ann-fraser-pryce.webp',
+    image: {
+      src: '/images/athletes/shelly-ann-fraser-pryce.webp',
+      alt: 'Shelly-Ann Fraser-Pryce athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Shelly-Ann%20Fraser-Pryce',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '谢莉-安·弗雷泽-普莱斯',
     englishName: 'Shelly-Ann Fraser-Pryce',
     country: '牙买加',
@@ -187,8 +223,8 @@ export const athletes: Athlete[] = [
     mainEvent: '100m',
     tags: ['袖珍火箭', '传奇女王', '五届世锦赛冠军'],
     personalBest: [
-      { event: '100m', result: '10.60s', date: '2021', location: '洛桑' },
-      { event: '200m', result: '21.79s' },
+      { event: '100m', result: '10.60s', date: '2021-08-26', location: '洛桑' },
+      { event: '200m', result: '21.79s', date: '2008-06-29' },
     ],
     seasonBest: [{ event: '100m', result: '10.77s', year: 2023 }],
     diamondLeagueHighlights: [
@@ -196,7 +232,7 @@ export const athletes: Athlete[] = [
       '在钻石联赛瑞士洛桑站跑出 10.60s PB',
     ],
     majorHonors: [
-      '奥运会：3 金（2008、2012、2020 的 4×100m 和 100m）',
+      '奥运会：3 金 1 银（2008 100m 金、2012 100m 金、2020 4×100m 金、2020 100m 银）',
       '世锦赛：5 次 100m 冠军（2009、2013、2015、2019、2022）',
       '35 岁仍能在世锦赛夺冠，创造了田径史上的传奇',
     ],
@@ -228,6 +264,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'letsile-tebogo',
+    avatar: '/images/athletes/letsile-tebogo.webp',
+    image: {
+      src: '/images/athletes/letsile-tebogo.webp',
+      alt: 'Letsile Tebogo athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Letsile%20Tebogo',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '莱齐莱·特博格',
     englishName: 'Letsile Tebogo',
     country: '博茨瓦纳',
@@ -238,8 +283,8 @@ export const athletes: Athlete[] = [
     mainEvent: '200m',
     tags: ['非洲新星', '00后天才', '未来之星'],
     personalBest: [
-      { event: '100m', result: '9.86s', date: '2024' },
-      { event: '200m', result: '19.46s', date: '2024', location: '巴黎' },
+      { event: '100m', result: '9.86s', date: '2024-06' },
+      { event: '200m', result: '19.46s', date: '2024-08-08', location: '巴黎' },
     ],
     seasonBest: [
       { event: '100m', result: '9.86s', year: 2024 },
@@ -281,6 +326,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'erriyon-knighton',
+    avatar: '/images/athletes/erriyon-knighton.webp',
+    image: {
+      src: '/images/athletes/erriyon-knighton.webp',
+      alt: 'Erriyon Knighton athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Erriyon%20Knighton',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '埃里扬·奈顿',
     englishName: 'Erriyon Knighton',
     country: '美国',
@@ -291,8 +345,8 @@ export const athletes: Athlete[] = [
     mainEvent: '200m',
     tags: ['天才少年', '破博尔特纪录', '未来可期'],
     personalBest: [
-      { event: '200m', result: '19.49s', date: '2022' },
-      { event: '100m', result: '9.99s' },
+      { event: '200m', result: '19.49s', date: '2022-04-30' },
+      { event: '100m', result: '9.99s', date: '2022-06-24' },
     ],
     seasonBest: [{ event: '200m', result: '19.77s', year: 2024 }],
     diamondLeagueHighlights: [
@@ -336,6 +390,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'karsten-warholm',
+    avatar: '/images/athletes/karsten-warholm.webp',
+    image: {
+      src: '/images/athletes/karsten-warholm.webp',
+      alt: 'Karsten Warholm athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Karsten%20Warholm',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '卡斯滕·瓦尔霍姆',
     englishName: 'Karsten Warholm',
     country: '挪威',
@@ -387,6 +450,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'sydney-mclaughlin-levrone',
+    avatar: '/images/athletes/sydney-mclaughlin-levrone.webp',
+    image: {
+      src: '/images/athletes/sydney-mclaughlin-levrone.webp',
+      alt: 'Sydney McLaughlin-Levrone athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Sydney%20McLaughlin-Levrone',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '悉尼·麦克劳克林-莱夫隆',
     englishName: 'Sydney McLaughlin-Levrone',
     country: '美国',
@@ -397,8 +469,8 @@ export const athletes: Athlete[] = [
     mainEvent: '400mH',
     tags: ['女子400栏天后', '世界纪录收割机', '全能天才'],
     personalBest: [
-      { event: '400mH', result: '50.37s', date: '2024', location: '巴黎' },
-      { event: '400m', result: '48.74s' },
+      { event: '400mH', result: '50.37s', date: '2024-08-08', location: '巴黎' },
+      { event: '400m', result: '48.74s', date: '2023-07-09' },
     ],
     seasonBest: [{ event: '400mH', result: '50.37s', year: 2024 }],
     diamondLeagueHighlights: [
@@ -441,6 +513,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'femke-bol',
+    avatar: '/images/athletes/femke-bol.webp',
+    image: {
+      src: '/images/athletes/femke-bol.webp',
+      alt: 'Femke Bol athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Femke%20Bol',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '费姆克·博尔',
     englishName: 'Femke Bol',
     country: '荷兰',
@@ -451,8 +532,8 @@ export const athletes: Athlete[] = [
     mainEvent: '400mH',
     tags: ['荷兰飞人', '室内400纪录', '全能跨栏'],
     personalBest: [
-      { event: '400mH', result: '50.95s', date: '2024' },
-      { event: '400m', result: '49.17s', location: '室内' },
+      { event: '400mH', result: '50.95s', date: '2024-08-08' },
+      { event: '400m', result: '49.17s', date: '2024-02-18', location: '室内' },
     ],
     seasonBest: [{ event: '400mH', result: '50.95s', year: 2024 }],
     diamondLeagueHighlights: [
@@ -494,6 +575,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'rai-benjamin',
+    avatar: '/images/athletes/rai-benjamin.webp',
+    image: {
+      src: '/images/athletes/rai-benjamin.webp',
+      alt: 'Rai Benjamin athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Rai%20Benjamin',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '莱伊·本杰明',
     englishName: 'Rai Benjamin',
     country: '美国',
@@ -504,8 +594,8 @@ export const athletes: Athlete[] = [
     mainEvent: '400mH',
     tags: ['400栏亚军王', '稳定输出', '技术流'],
     personalBest: [
-      { event: '400mH', result: '46.17s', date: '2021', location: '东京' },
-      { event: '400m', result: '44.21s' },
+      { event: '400mH', result: '46.17s', date: '2021-08-03', location: '东京' },
+      { event: '400m', result: '44.21s', date: '2024-06-09' },
     ],
     seasonBest: [{ event: '400mH', result: '46.46s', year: 2024 }],
     diamondLeagueHighlights: [
@@ -549,6 +639,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'jakob-ingebrigtsen',
+    avatar: '/images/athletes/jakob-ingebrigtsen.webp',
+    image: {
+      src: '/images/athletes/jakob-ingebrigtsen.webp',
+      alt: 'Jakob Ingebrigtsen athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Jakob%20Ingebrigtsen',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '雅各布·英格布里格森',
     englishName: 'Jakob Ingebrigtsen',
     country: '挪威',
@@ -606,6 +705,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'faith-kipyegon',
+    avatar: '/images/athletes/faith-kipyegon.webp',
+    image: {
+      src: '/images/athletes/faith-kipyegon.webp',
+      alt: 'Faith Kipyegon athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Faith%20Kipyegon',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '费丝·基普耶贡',
     englishName: 'Faith Kipyegon',
     country: '肯尼亚',
@@ -663,6 +771,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'josh-kerr',
+    avatar: '/images/athletes/josh-kerr.webp',
+    image: {
+      src: '/images/athletes/josh-kerr.webp',
+      alt: 'Josh Kerr athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Josh%20Kerr',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '乔什·科尔',
     englishName: 'Josh Kerr',
     country: '英国',
@@ -718,6 +835,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'mondo-duplantis',
+    avatar: '/images/athletes/mondo-duplantis.webp',
+    image: {
+      src: '/images/athletes/mondo-duplantis.webp',
+      alt: 'Mondo Duplantis athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Mondo%20Duplantis',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '蒙多·杜普兰蒂斯',
     englishName: 'Mondo Duplantis',
     country: '瑞典',
@@ -728,21 +854,22 @@ export const athletes: Athlete[] = [
     mainEvent: 'pole-vault',
     tags: ['撑竿跳之王', '世界纪录机器', '一人一项目'],
     personalBest: [
-      { event: 'pole-vault', result: '6.27m', date: '2025', location: '钻石联赛（2025 赛季）' },
+      { event: 'pole-vault', result: '6.32m', date: '2025-05-28', location: '斯德哥尔摩' },
     ],
-    seasonBest: [{ event: 'pole-vault', result: '6.27m', year: 2025 }],
+    seasonBest: [{ event: 'pole-vault', result: '6.32m', year: 2025 }],
     diamondLeagueHighlights: [
       '历史上唯一一位在钻石联赛中多次打破世界纪录的运动员',
+      '2025 年钻石联赛斯德哥尔摩站跳出 6.32m 世界纪录',
       '2024 年钻石联赛西里西亚站跳出 6.26m',
       '2025 赛季延续"逢参赛必破纪录"的恐怖统治',
       '钻石联赛出场费最高一档',
     ],
     majorHonors: [
       '2020 东京奥运会金牌（6.02m）',
-      '2024 巴黎奥运会金牌（6.25m 世界纪录）',
+      '2024 巴黎奥运会金牌（6.25m）',
       '2025 东京世锦赛金牌',
       '2022、2023 世锦赛金牌',
-      '室内、室外世界纪录保持者',
+      '室内、室外世界纪录保持者（室外 6.32m，室内 6.22m）',
       '已 11+ 次打破世界纪录（每次提高 1cm，堪称田径史上最精明的纪录策略）',
     ],
     styleProfile: {
@@ -773,6 +900,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'yaroslava-mahuchikh',
+    avatar: '/images/athletes/yaroslava-mahuchikh.webp',
+    image: {
+      src: '/images/athletes/yaroslava-mahuchikh.webp',
+      alt: 'Yaroslava Mahuchikh athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Yaroslava%20Mahuchikh',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '雅罗斯拉娃·马胡奇赫',
     englishName: 'Yaroslava Mahuchikh',
     country: '乌克兰',
@@ -825,6 +961,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'mutaz-essa-barshim',
+    avatar: '/images/athletes/mutaz-essa-barshim.webp',
+    image: {
+      src: '/images/athletes/mutaz-essa-barshim.webp',
+      alt: 'Mutaz Essa Barshim athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Mutaz%20Essa%20Barshim',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '穆塔兹·埃萨·巴尔希姆',
     englishName: 'Mutaz Essa Barshim',
     country: '卡塔尔',
@@ -880,6 +1025,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'ryan-crouser',
+    avatar: '/images/athletes/ryan-crouser.webp',
+    image: {
+      src: '/images/athletes/ryan-crouser.webp',
+      alt: 'Ryan Crouser athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Ryan%20Crouser',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '瑞安·克劳泽',
     englishName: 'Ryan Crouser',
     country: '美国',
@@ -931,6 +1085,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'neeraj-chopra',
+    avatar: '/images/athletes/neeraj-chopra.webp',
+    image: {
+      src: '/images/athletes/neeraj-chopra.webp',
+      alt: 'Neeraj Chopra athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Neeraj%20Chopra',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '尼拉杰·乔普拉',
     englishName: 'Neeraj Chopra',
     country: '印度',
@@ -984,6 +1147,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'joe-kovacs',
+    avatar: '/images/athletes/joe-kovacs.webp',
+    image: {
+      src: '/images/athletes/joe-kovacs.webp',
+      alt: 'Joe Kovacs athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Joe%20Kovacs',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '乔·科瓦奇',
     englishName: 'Joe Kovacs',
     country: '美国',
@@ -1039,6 +1211,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'shericka-jackson',
+    avatar: '/images/athletes/shericka-jackson.webp',
+    image: {
+      src: '/images/athletes/shericka-jackson.webp',
+      alt: 'Shericka Jackson athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Shericka%20Jackson',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '谢丽卡·杰克逊',
     englishName: 'Shericka Jackson',
     country: '牙买加',
@@ -1091,6 +1272,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'gabby-thomas',
+    avatar: '/images/athletes/gabby-thomas.webp',
+    image: {
+      src: '/images/athletes/gabby-thomas.webp',
+      alt: 'Gabby Thomas athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Gabby%20Thomas',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '加比·托马斯',
     englishName: 'Gabby Thomas',
     country: '美国',
@@ -1142,6 +1332,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'marcell-jacobs',
+    avatar: '/images/athletes/marcell-jacobs.webp',
+    image: {
+      src: '/images/athletes/marcell-jacobs.webp',
+      alt: 'Marcell Jacobs athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Marcell%20Jacobs',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '马塞尔·雅各布斯',
     englishName: 'Marcell Jacobs',
     country: '意大利',
@@ -1192,6 +1391,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'kishane-thompson',
+    avatar: '/images/athletes/kishane-thompson.webp',
+    image: {
+      src: '/images/athletes/kishane-thompson.webp',
+      alt: 'Kishane Thompson athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Kishane%20Thompson',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '基沙恩·汤普森',
     englishName: 'Kishane Thompson',
     country: '牙买加',
@@ -1244,6 +1452,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'grant-holloway',
+    avatar: '/images/athletes/grant-holloway.webp',
+    image: {
+      src: '/images/athletes/grant-holloway.webp',
+      alt: 'Grant Holloway athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Grant%20Holloway',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '格兰特·霍洛威',
     englishName: 'Grant Holloway',
     country: '美国',
@@ -1297,6 +1514,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'hansle-parchment',
+    avatar: '/images/athletes/hansle-parchment.webp',
+    image: {
+      src: '/images/athletes/hansle-parchment.webp',
+      alt: 'Hansle Parchment athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Hansle%20Parchment',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '汉斯尔·帕奇门特',
     englishName: 'Hansle Parchment',
     country: '牙买加',
@@ -1346,6 +1572,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'jasmine-camacho-quinn',
+    avatar: '/images/athletes/jasmine-camacho-quinn.webp',
+    image: {
+      src: '/images/athletes/jasmine-camacho-quinn.webp',
+      alt: 'Jasmine Camacho-Quinn athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Jasmine%20Camacho-Quinn',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '贾斯敏·卡马乔-奎因',
     englishName: 'Jasmine Camacho-Quinn',
     country: '波多黎各',
@@ -1397,6 +1632,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'tobi-amusan',
+    avatar: '/images/athletes/tobi-amusan.webp',
+    image: {
+      src: '/images/athletes/tobi-amusan.webp',
+      alt: 'Tobi Amusan athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Tobi%20Amusan',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '托比·阿穆桑',
     englishName: 'Tobi Amusan',
     country: '尼日利亚',
@@ -1447,6 +1691,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'alison-dos-santos',
+    avatar: '/images/athletes/alison-dos-santos.webp',
+    image: {
+      src: '/images/athletes/alison-dos-santos.webp',
+      alt: 'Alison dos Santos athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Alison%20dos%20Santos',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '阿利松·多斯桑托斯',
     englishName: 'Alison dos Santos',
     country: '巴西',
@@ -1501,6 +1754,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'sifan-hassan',
+    avatar: '/images/athletes/sifan-hassan.jpg',
+    image: {
+      src: '/images/athletes/sifan-hassan.jpg',
+      alt: 'Sifan Hassan athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Sifan%20Hassan',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '西凡·哈桑',
     englishName: 'Sifan Hassan',
     country: '荷兰',
@@ -1559,6 +1821,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'gudaf-tsegay',
+    avatar: '/images/athletes/gudaf-tsegay.webp',
+    image: {
+      src: '/images/athletes/gudaf-tsegay.webp',
+      alt: 'Gudaf Tsegay athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Gudaf%20Tsegay',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '古达夫·茨盖',
     englishName: 'Gudaf Tsegay',
     country: '埃塞俄比亚',
@@ -1612,6 +1883,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'soufiane-el-bakkali',
+    avatar: '/images/athletes/soufiane-el-bakkali.webp',
+    image: {
+      src: '/images/athletes/soufiane-el-bakkali.webp',
+      alt: 'Soufiane El Bakkali athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Soufiane%20El%20Bakkali',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '苏菲安·埃尔·巴卡里',
     englishName: 'Soufiane El Bakkali',
     country: '摩洛哥',
@@ -1664,6 +1944,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'emmanuel-wanyonyi',
+    avatar: '/images/athletes/emmanuel-wanyonyi.webp',
+    image: {
+      src: '/images/athletes/emmanuel-wanyonyi.webp',
+      alt: 'Emmanuel Wanyonyi athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Emmanuel%20Wanyonyi',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '埃马纽埃尔·瓦尼奥尼',
     englishName: 'Emmanuel Wanyonyi',
     country: '肯尼亚',
@@ -1718,6 +2007,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'yulimar-rojas',
+    avatar: '/images/athletes/yulimar-rojas.webp',
+    image: {
+      src: '/images/athletes/yulimar-rojas.webp',
+      alt: 'Yulimar Rojas athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Yulimar%20Rojas',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '尤利玛尔·罗哈斯',
     englishName: 'Yulimar Rojas',
     country: '委内瑞拉',
@@ -1771,6 +2069,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'malaika-mihambo',
+    avatar: '/images/athletes/malaika-mihambo.webp',
+    image: {
+      src: '/images/athletes/malaika-mihambo.webp',
+      alt: 'Malaika Mihambo athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Malaika%20Mihambo',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '马来卡·米汉博',
     englishName: 'Malaika Mihambo',
     country: '德国',
@@ -1821,6 +2128,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'pedro-pichardo',
+    avatar: '/images/athletes/pedro-pichardo.webp',
+    image: {
+      src: '/images/athletes/pedro-pichardo.webp',
+      alt: 'Pedro Pichardo athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Pedro%20Pichardo',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '佩德罗·皮查多',
     englishName: 'Pedro Pichardo',
     country: '葡萄牙',
@@ -1876,6 +2192,15 @@ export const athletes: Athlete[] = [
   // ============================================================
   {
     id: 'valarie-allman',
+    avatar: '/images/athletes/valarie-allman.webp',
+    image: {
+      src: '/images/athletes/valarie-allman.webp',
+      alt: 'Valarie Allman athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Valarie%20Allman',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '瓦莱丽·奥尔曼',
     englishName: 'Valarie Allman',
     country: '美国',
@@ -1927,6 +2252,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'daniel-stahl',
+    avatar: '/images/athletes/daniel-stahl.webp',
+    image: {
+      src: '/images/athletes/daniel-stahl.webp',
+      alt: 'Daniel Ståhl athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Daniel%20St%C3%A5hl',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '丹尼尔·斯托尔',
     englishName: 'Daniel Ståhl',
     country: '瑞典',
@@ -1977,6 +2311,15 @@ export const athletes: Athlete[] = [
   },
   {
     id: 'anderson-peters',
+    avatar: '/images/athletes/anderson-peters.webp',
+    image: {
+      src: '/images/athletes/anderson-peters.webp',
+      alt: 'Anderson Peters athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Anderson%20Peters',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '安德森·彼得斯',
     englishName: 'Anderson Peters',
     country: '格林纳达',

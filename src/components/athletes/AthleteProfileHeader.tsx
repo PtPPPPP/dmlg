@@ -1,5 +1,7 @@
-import type { Athlete, EventCategory } from '../../types';
-import { EVENT_CATEGORY_TAG_CLASS } from '../../types';
+import { memo } from 'react';
+import { EVENT_CATEGORY_TAG_CLASS } from '../../data';
+import type { Athlete, EventCategory } from '../../data';
+import AthleteImage from './AthleteImage';
 
 interface AthleteProfileHeaderProps {
   athlete: Athlete;
@@ -9,7 +11,7 @@ interface AthleteProfileHeaderProps {
   onToggleFavorite: (id: string) => void;
 }
 
-export default function AthleteProfileHeader({
+function AthleteProfileHeader({
   athlete,
   category,
   eventCategoryLabel,
@@ -20,10 +22,14 @@ export default function AthleteProfileHeader({
 
   return (
     <div className="flex-1">
+      {/* Hero 大图 */}
+      <div className="mb-6">
+        <AthleteImage athlete={athlete} variant="hero" showCredit />
+      </div>
+
+      {/* 头像 + 基本信息 */}
       <div className="mb-6 flex items-start gap-5">
-        <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500/40 to-brand-700/40 text-2xl font-bold text-white ring-2 ring-brand-500/20">
-          {athlete.name.slice(0, 2)}
-        </div>
+        <AthleteImage athlete={athlete} variant="avatar" className="h-20 w-20 flex-shrink-0" />
         <div>
           <h1 className="text-2xl font-extrabold text-white sm:text-3xl">
             {athlete.name}
@@ -57,6 +63,7 @@ export default function AthleteProfileHeader({
         </div>
       </div>
 
+      {/* 标签 */}
       <div className="mb-6 flex flex-wrap gap-2">
         {athlete.tags.map((tag) => (
           <span
@@ -68,6 +75,7 @@ export default function AthleteProfileHeader({
         ))}
       </div>
 
+      {/* 收藏按钮 */}
       <button
         onClick={() => onToggleFavorite(athlete.id)}
         className={`inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all ${
@@ -95,3 +103,4 @@ export default function AthleteProfileHeader({
   );
 }
 
+export default memo(AthleteProfileHeader);

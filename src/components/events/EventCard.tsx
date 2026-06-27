@@ -1,12 +1,13 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
-import type { TrackEvent } from '../../types';
-import { EVENT_CATEGORY_LABELS, EVENT_CATEGORY_TAG_CLASS } from '../../types';
+import { EVENT_CATEGORY_LABELS, EVENT_CATEGORY_TAG_CLASS } from '../../data';
+import type { TrackEvent } from '../../data';
 
 interface EventCardProps {
   event: TrackEvent;
 }
 
-export default function EventCard({ event }: EventCardProps) {
+function EventCard({ event }: EventCardProps) {
   return (
     <div className="glass-card-hover group overflow-hidden">
       <div className="p-5">
@@ -91,3 +92,5 @@ export default function EventCard({ event }: EventCardProps) {
     </div>
   );
 }
+
+export default memo(EventCard);

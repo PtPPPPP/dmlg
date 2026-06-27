@@ -1,13 +1,16 @@
+import { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import type { Athlete, EventCategory } from '../../types';
-import { EVENT_CATEGORY_TAG_CLASS } from '../../types';
-import { competitionResults, getEventById } from '../../data';
 import {
+  competitionResults,
+  getEventById,
   getAthleteDisplayLatestResult,
   getTaggedResultsByAthleteId,
-} from '../../domain/athletics/resultUtils';
+  EVENT_CATEGORY_TAG_CLASS,
+} from '../../data';
+import type { Athlete, EventCategory } from '../../data';
 import { SourceLink } from '../data/SourceLink';
 import { VerificationBadge } from '../data/VerificationBadge';
+import AthleteImage from './AthleteImage';
 
 interface AthleteCardProps {
   athlete: Athlete;
@@ -18,70 +21,71 @@ interface AthleteCardProps {
 function getCategoryFromAthlete(athlete: Athlete): EventCategory {
   const event = getEventById(athlete.mainEvent);
   if (event) return event.category;
-  return 'sprint';
-}
-
-function getInitials(name: string): string {
-  return name.slice(0, 2);
+  return 'sprints';
 }
 
 const GENDER_LABEL = { male: '♂', female: '♀' } as const;
 
-export default function AthleteCard({ athlete, isFavorite, onToggleFavorite }: AthleteCardProps) {
+function AthleteCard({ athlete, isFavorite, onToggleFavorite }: AthleteCardProps) {
   const category = getCategoryFromAthlete(athlete);
-  const topPB = getTaggedResultsByAthleteId(competitionResults, athlete, 'PB')[0];
-  const displayResult = getAthleteDisplayLatestResult(athlete, competitionResults);
+  const topPB = useMemo(
+    () => getTaggedResultsByAthleteId(competitionResults, athlete, 'PB')[0],
+    [athlete.id]
+  );
+  const displayResult = useMemo(
+    () => getAthleteDisplayLatestResult(athlete, competitionResults),
+    [athlete.id]
+  );
 
   return (
     <div className="glass-card-hover group relative overflow-hidden">
-      <div className={`h-1 w-full ${
-        category === 'sprint' ? 'bg-track-sprint' :
-        category === 'distance' ? 'bg-track-distance' :
-        category === 'hurdle' ? 'bg-track-hurdle' :
-        category === 'jump' ? 'bg-track-jump' :
-        'bg-track-throw'
-      }`} />
+      {/* ── 顶部照片区域 ── */}
+      <div className="relative">
+        <AthleteImage athlete={athlete} variant="card" />
 
-      <div className="p-5">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand-500/30 to-brand-700/30 text-sm font-bold text-white ring-2 ring-white/10">
-              {getInitials(athlete.name)}
-            </div>
+        {/* 图片上的叠加信息 */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+          <div className="flex items-end justify-between">
             <div className="min-w-0">
-              <h3 className="font-bold text-white truncate">{athlete.name}</h3>
-              <p className="text-xs text-slate-400">
+              <h3 className="font-bold text-white text-lg leading-tight drop-shadow-lg truncate">
+                {athlete.name}
+              </h3>
+              <p className="text-xs text-white/70 mt-0.5 drop-shadow">
                 {athlete.country} · {GENDER_LABEL[athlete.gender]} · {athlete.englishName}
               </p>
             </div>
-          </div>
 
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              onToggleFavorite(athlete.id);
-            }}
-            className="flex-shrink-0 rounded-lg p-1.5 transition-colors hover:bg-white/10"
-            aria-label={isFavorite ? '取消收藏' : '加入收藏'}
-          >
-            <svg
-              className={`h-5 w-5 transition-colors ${
-                isFavorite ? 'text-track-gold fill-track-gold' : 'text-slate-500'
-              }`}
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-              fill={isFavorite ? 'currentColor' : 'none'}
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                onToggleFavorite(athlete.id);
+              }}
+              className="flex-shrink-0 rounded-lg p-1.5 transition-colors hover:bg-white/20 backdrop-blur-sm"
+              aria-label={isFavorite ? '取消收藏' : '加入收藏'}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-              />
-            </svg>
-          </button>
+              <svg
+                className={`h-5 w-5 transition-colors ${
+                  isFavorite ? 'text-track-gold fill-track-gold drop-shadow' : 'text-white/60'
+                }`}
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                fill={isFavorite ? 'currentColor' : 'none'}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
 
+      {/* ── 信息区域 ── */}
+      <div className="p-5">
+        {/* 标签 */}
         <div className="flex flex-wrap gap-1.5 mb-3">
           <span className={EVENT_CATEGORY_TAG_CLASS[category]}>
             {athlete.mainEvent}
@@ -96,6 +100,7 @@ export default function AthleteCard({ athlete, isFavorite, onToggleFavorite }: A
           ))}
         </div>
 
+        {/* PB */}
         {topPB && (
           <div className="mb-3 rounded-lg bg-white/5 px-3 py-2">
             <div className="flex items-center justify-between gap-2">
@@ -111,6 +116,7 @@ export default function AthleteCard({ athlete, isFavorite, onToggleFavorite }: A
           </div>
         )}
 
+        {/* 技术特点 */}
         <div className="mb-4">
           <p className="text-xs text-slate-500 mb-1.5">技术特点</p>
           <div className="flex flex-wrap gap-1">
@@ -125,6 +131,7 @@ export default function AthleteCard({ athlete, isFavorite, onToggleFavorite }: A
           </div>
         </div>
 
+        {/* 最近比赛 */}
         {displayResult && (
           <div className="mb-4 rounded-lg bg-white/5 px-3 py-2">
             <div className="flex items-center justify-between mb-1">
@@ -154,6 +161,7 @@ export default function AthleteCard({ athlete, isFavorite, onToggleFavorite }: A
           </div>
         )}
 
+        {/* 详情链接 */}
         <Link
           to={`/athletes/${athlete.id}`}
           className="flex items-center justify-center gap-1 rounded-lg bg-white/5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
@@ -167,3 +175,5 @@ export default function AthleteCard({ athlete, isFavorite, onToggleFavorite }: A
     </div>
   );
 }
+
+export default memo(AthleteCard);

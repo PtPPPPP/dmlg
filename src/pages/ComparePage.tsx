@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react';
 import { athletes, getAthleteById } from '../data';
 import { useFavorites } from '../hooks/useFavorites';
-import ComparePanel from '../components/ComparePanel';
+import ComparePanel from '../components/compare/ComparePanel';
 
-export default function Compare() {
+export default function ComparePage() {
   const { favorites } = useFavorites();
   const [selected1, setSelected1] = useState('');
   const [selected2, setSelected2] = useState('');

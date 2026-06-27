@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   competitionResults,
@@ -5,21 +6,21 @@ import {
   getAthleteById,
   getEventById,
   getSimilarAthletes,
+  getResultsForAthlete,
+  getTaggedResultsByAthleteId,
+  EVENT_CATEGORY_LABELS,
 } from '../data';
 import { useFavorites } from '../hooks/useFavorites';
-import { EVENT_CATEGORY_LABELS } from '../types';
-import RadarChart from '../components/RadarChart';
-import DataFreshnessBadge from '../components/DataFreshnessBadge';
+import RadarChart from '../components/ui/RadarChart';
+import DataFreshnessBadge from '../components/data/DataFreshnessBadge';
+import ImageCredit from '../components/data/ImageCredit';
 import AthleteProfileHeader from '../components/athletes/AthleteProfileHeader';
 import AthleteResultTable from '../components/athletes/AthleteResultTable';
 import AthleteStatsPanel from '../components/athletes/AthleteStatsPanel';
-import {
-  getResultsForAthlete,
-  getTaggedResultsByAthleteId,
-} from '../domain/athletics/resultUtils';
+import AthleteImage from '../components/athletes/AthleteImage';
 
 
-export default function AthleteDetail() {
+export default function AthleteDetailPage() {
   const { id } = useParams<{ id: string }>();
   const athlete = id ? getAthleteById(id) : undefined;
   const { isFavorite, toggleFavorite } = useFavorites();
@@ -42,22 +43,25 @@ export default function AthleteDetail() {
     );
   }
 
-  const mainEventData = getEventById(athlete.mainEvent);
-  const category = mainEventData?.category ?? 'sprint';
-  const similar = getSimilarAthletes(athlete.id);
+  // 缓存运动员详情页的计算结果
+  const mainEventData = useMemo(() => getEventById(athlete.mainEvent), [athlete.mainEvent]);
+  const category = mainEventData?.category ?? 'sprints';
+  const similar = useMemo(() => getSimilarAthletes(athlete.id), [athlete.id]);
   const fav = isFavorite(athlete.id);
-  const recentCompetitionResults = getResultsForAthlete(competitionResults, athlete).slice(0, 5);
-  const featuredResults = [
+  const recentCompetitionResults = useMemo(
+    () => getResultsForAthlete(competitionResults, athlete).slice(0, 5),
+    [athlete.id]
+  );
+  const featuredResults = useMemo(() => [
     ...getTaggedResultsByAthleteId(competitionResults, athlete, 'PB'),
     ...getTaggedResultsByAthleteId(competitionResults, athlete, 'SB'),
   ].filter(
     (result, index, all) => all.findIndex((item) => item.id === result.id) === index
+  ), [athlete.id]);
+  const seasonBestResults = useMemo(
+    () => getTaggedResultsByAthleteId(competitionResults, athlete, 'SB').slice(0, 3),
+    [athlete.id]
   );
-  const seasonBestResults = getTaggedResultsByAthleteId(
-    competitionResults,
-    athlete,
-    'SB'
-  ).slice(0, 3);
 
   const eventCategoryLabel = EVENT_CATEGORY_LABELS[category];
 
@@ -100,6 +104,13 @@ export default function AthleteDetail() {
               <AthleteStatsPanel athlete={athlete} results={competitionResults} />
             </div>
           </div>
+
+          {/* 图片来源信息 */}
+          {athlete.image && athlete.image.usageStatus !== 'placeholder' && (
+            <div className="mt-4 pt-4 border-t border-white/5">
+              <ImageCredit image={athlete.image} />
+            </div>
+          )}
         </div>
 
         {/* Main content grid */}
@@ -259,9 +270,11 @@ export default function AthleteDetail() {
                       className="block glass-card-hover p-4"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-500/20 to-brand-700/20 text-xs font-bold text-white">
-                          {sa.name.slice(0, 2)}
-                        </div>
+                        <AthleteImage
+                          athlete={sa}
+                          variant="avatar"
+                          className="h-10 w-10 flex-shrink-0"
+                        />
                         <div className="min-w-0">
                           <p className="text-sm font-semibold text-white truncate">
                             {sa.name}

@@ -1,5 +1,5 @@
-import type { StyleProfile, StyleProfileKey } from '../../types';
-import { STYLE_LABELS } from '../../types';
+import { STYLE_LABELS } from '../../data';
+import type { StyleProfile, StyleProfileKey } from '../../data';
 
 interface RadarChartProps {
   profile: StyleProfile;

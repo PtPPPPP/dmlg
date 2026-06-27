@@ -1,4 +1,4 @@
-import type { Athlete } from '../../types';
+import type { Athlete } from '../../domain/athletics/types';
 
 export const newAthletes: Athlete[] = [
   // ============================================================
@@ -6,6 +6,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'jessica-schilder',
+    avatar: '/images/athletes/jessica-schilder.webp',
+    image: {
+      src: '/images/athletes/jessica-schilder.webp',
+      alt: 'Jessica Schilder athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Jessica%20Schilder',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '杰西卡·斯希尔德',
     englishName: 'Jessica Schilder',
     country: '荷兰',
@@ -53,6 +62,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'chase-jackson',
+    avatar: '/images/athletes/chase-jackson.webp',
+    image: {
+      src: '/images/athletes/chase-jackson.webp',
+      alt: 'Chase Jackson athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Chase%20Jackson',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '蔡斯·杰克逊',
     englishName: 'Chase Jackson',
     country: '美国',
@@ -100,6 +118,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'sarah-mitton',
+    avatar: '/images/athletes/sarah-mitton.webp',
+    image: {
+      src: '/images/athletes/sarah-mitton.webp',
+      alt: 'Sarah Mitton athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Sarah%20Mitton',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '莎拉·米顿',
     englishName: 'Sarah Mitton',
     country: '加拿大',
@@ -147,6 +174,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'rajindra-campbell',
+    avatar: '/images/athletes/rajindra-campbell.webp',
+    image: {
+      src: '/images/athletes/rajindra-campbell.webp',
+      alt: 'Rajindra Campbell athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Rajindra%20Campbell',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '拉金德拉·坎贝尔',
     englishName: 'Rajindra Campbell',
     country: '牙买加',
@@ -193,6 +229,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'jordan-geist',
+    avatar: '/images/athletes/jordan-geist.webp',
+    image: {
+      src: '/images/athletes/jordan-geist.webp',
+      alt: 'Jordan Geist athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Jordan%20Geist',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '乔丹·盖斯特',
     englishName: 'Jordan Geist',
     country: '美国',
@@ -242,6 +287,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'mohamed-abdilaahi',
+    avatar: '/images/athletes/mohamed-abdilaahi.webp',
+    image: {
+      src: '/images/athletes/mohamed-abdilaahi.webp',
+      alt: 'Mohamed Abdilaahi athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Mohamed%20Abdilaahi',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '穆罕默德·阿卜杜拉希',
     englishName: 'Mohamed Abdilaahi',
     country: '德国',
@@ -289,6 +343,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'reynold-cheruiyot',
+    avatar: '/images/athletes/reynold-cheruiyot.webp',
+    image: {
+      src: '/images/athletes/reynold-cheruiyot.webp',
+      alt: 'Reynold Cheruiyot athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Reynold%20Cheruiyot',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '雷诺德·切鲁约特',
     englishName: 'Reynold Cheruiyot',
     country: '肯尼亚',
@@ -336,6 +399,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'andreas-almgren',
+    avatar: '/images/athletes/andreas-almgren.webp',
+    image: {
+      src: '/images/athletes/andreas-almgren.webp',
+      alt: 'Andreas Almgren athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Andreas%20Almgren',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '安德烈亚斯·阿尔姆格伦',
     englishName: 'Andreas Almgren',
     country: '瑞典',
@@ -383,6 +455,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'birke-haylom',
+    avatar: '/images/athletes/birke-haylom.webp',
+    image: {
+      src: '/images/athletes/birke-haylom.webp',
+      alt: 'Birke Haylom athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Birke%20Haylom',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '比尔克·哈伊洛姆',
     englishName: 'Birke Haylom',
     country: '埃塞俄比亚',
@@ -430,6 +511,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'tsige-duguma',
+    avatar: '/images/athletes/tsige-duguma.webp',
+    image: {
+      src: '/images/athletes/tsige-duguma.webp',
+      alt: 'Tsige Duguma athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Tsige%20Duguma',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '齐格·杜古马',
     englishName: 'Tsige Duguma',
     country: '埃塞俄比亚',
@@ -477,6 +567,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'abbey-caldwell',
+    avatar: '/images/athletes/abbey-caldwell.webp',
+    image: {
+      src: '/images/athletes/abbey-caldwell.webp',
+      alt: 'Abbey Caldwell athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Abbey%20Caldwell',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '阿比·考德威尔',
     englishName: 'Abbey Caldwell',
     country: '澳大利亚',
@@ -523,6 +622,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'mark-english',
+    avatar: '/images/athletes/mark-english.webp',
+    image: {
+      src: '/images/athletes/mark-english.webp',
+      alt: 'Mark English athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Mark%20English',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '马克·英格利希',
     englishName: 'Mark English',
     country: '爱尔兰',
@@ -570,6 +678,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'kethobogile-haingura',
+    avatar: '/images/athletes/kethobogile-haingura.webp',
+    image: {
+      src: '/images/athletes/kethobogile-haingura.webp',
+      alt: 'Kethobogile Haingura athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Kethobogile%20Haingura',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '凯托博吉莱·海恩古拉',
     englishName: 'Kethobogile Haingura',
     country: '博茨瓦纳',
@@ -616,6 +733,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'brandon-miller',
+    avatar: '/images/athletes/brandon-miller.webp',
+    image: {
+      src: '/images/athletes/brandon-miller.webp',
+      alt: 'Brandon Miller athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Brandon%20Miller',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '布兰登·米勒',
     englishName: 'Brandon Miller',
     country: '美国',
@@ -662,6 +788,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'likina-amebaw',
+    avatar: '/images/athletes/likina-amebaw.webp',
+    image: {
+      src: '/images/athletes/likina-amebaw.webp',
+      alt: 'Likina Amebaw athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Likina%20Amebaw',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '利基娜·阿梅鲍',
     englishName: 'Likina Amebaw',
     country: '埃塞俄比亚',
@@ -709,6 +844,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'senayet-getachew',
+    avatar: '/images/athletes/senayet-getachew.webp',
+    image: {
+      src: '/images/athletes/senayet-getachew.webp',
+      alt: 'Senayet Getachew athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Senayet%20Getachew',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '塞纳耶特·格塔丘',
     englishName: 'Senayet Getachew',
     country: '埃塞俄比亚',
@@ -755,6 +899,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'addisu-yihune',
+    avatar: '/images/athletes/addisu-yihune.webp',
+    image: {
+      src: '/images/athletes/addisu-yihune.webp',
+      alt: 'Addisu Yihune athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Addisu%20Yihune',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '阿迪苏·伊胡内',
     englishName: 'Addisu Yihune',
     country: '埃塞俄比亚',
@@ -801,6 +954,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'biniam-mehary',
+    avatar: '/images/athletes/biniam-mehary.webp',
+    image: {
+      src: '/images/athletes/biniam-mehary.webp',
+      alt: 'Biniam Mehary athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Biniam%20Mehary',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '比尼亚姆·梅哈里',
     englishName: 'Biniam Mehary',
     country: '埃塞俄比亚',
@@ -848,6 +1010,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'emily-mackay',
+    avatar: '/images/athletes/emily-mackay.webp',
+    image: {
+      src: '/images/athletes/emily-mackay.webp',
+      alt: 'Emily Mackay athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Emily%20Mackay',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '埃米莉·麦凯',
     englishName: 'Emily Mackay',
     country: '美国',
@@ -898,6 +1069,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'peruth-chemutai',
+    avatar: '/images/athletes/peruth-chemutai.webp',
+    image: {
+      src: '/images/athletes/peruth-chemutai.webp',
+      alt: 'Peruth Chemutai athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Peruth%20Chemutai',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '佩鲁斯·切穆泰',
     englishName: 'Peruth Chemutai',
     country: '乌干达',
@@ -945,6 +1125,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'faith-cherotich',
+    avatar: '/images/athletes/faith-cherotich.webp',
+    image: {
+      src: '/images/athletes/faith-cherotich.webp',
+      alt: 'Faith Cherotich athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Faith%20Cherotich',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '费丝·切罗蒂奇',
     englishName: 'Faith Cherotich',
     country: '肯尼亚',
@@ -992,6 +1181,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'winfred-yavi',
+    avatar: '/images/athletes/winfred-yavi.jpg',
+    image: {
+      src: '/images/athletes/winfred-yavi.jpg',
+      alt: 'Winfred Yavi athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Winfred%20Yavi',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '温弗雷德·亚维',
     englishName: 'Winfred Yavi',
     country: '巴林',
@@ -1046,6 +1244,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'masai-russell',
+    avatar: '/images/athletes/masai-russell.webp',
+    image: {
+      src: '/images/athletes/masai-russell.webp',
+      alt: 'Masai Russell athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Masai%20Russell',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '玛赛·拉塞尔',
     englishName: 'Masai Russell',
     country: '美国',
@@ -1094,6 +1301,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'devynne-charlton',
+    avatar: '/images/athletes/devynne-charlton.webp',
+    image: {
+      src: '/images/athletes/devynne-charlton.webp',
+      alt: 'Devynne Charlton athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Devynne%20Charlton',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '德文·查尔顿',
     englishName: 'Devynne Charlton',
     country: '巴哈马',
@@ -1142,6 +1358,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'jamal-britt',
+    avatar: '/images/athletes/jamal-britt.webp',
+    image: {
+      src: '/images/athletes/jamal-britt.webp',
+      alt: 'Jamal Britt athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Jamal%20Britt',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '贾马尔·布里特',
     englishName: 'Jamal Britt',
     country: '美国',
@@ -1188,6 +1413,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'cordell-tinch',
+    avatar: '/images/athletes/cordell-tinch.webp',
+    image: {
+      src: '/images/athletes/cordell-tinch.webp',
+      alt: 'Cordell Tinch athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Cordell%20Tinch',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '科德尔·廷奇',
     englishName: 'Cordell Tinch',
     country: '美国',
@@ -1235,6 +1469,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'caleb-dean',
+    avatar: '/images/athletes/caleb-dean.webp',
+    image: {
+      src: '/images/athletes/caleb-dean.webp',
+      alt: 'Caleb Dean athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Caleb%20Dean',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '卡莱布·迪恩',
     englishName: 'Caleb Dean',
     country: '美国',
@@ -1281,6 +1524,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'rachid-muratake',
+    avatar: '/images/athletes/rachid-muratake.jpg',
+    image: {
+      src: '/images/athletes/rachid-muratake.jpg',
+      alt: 'Rachid Muratake athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Rachid%20Muratake',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '拉希德·村竹',
     englishName: 'Rachid Muratake',
     country: '日本',
@@ -1327,6 +1579,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'orlando-bennett',
+    avatar: '/images/athletes/orlando-bennett.webp',
+    image: {
+      src: '/images/athletes/orlando-bennett.webp',
+      alt: 'Orlando Bennett athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Orlando%20Bennett',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '奥兰多·贝内特',
     englishName: 'Orlando Bennett',
     country: '牙买加',
@@ -1376,6 +1637,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'shaunae-miller-uibo',
+    avatar: '/images/athletes/shaunae-miller-uibo.webp',
+    image: {
+      src: '/images/athletes/shaunae-miller-uibo.webp',
+      alt: 'Shaunae Miller-Uibo athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Shaunae%20Miller-Uibo',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '肖娜·米勒-乌伊博',
     englishName: 'Shaunae Miller-Uibo',
     country: '巴哈马',
@@ -1431,6 +1701,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'nickisha-pryce',
+    avatar: '/images/athletes/nickisha-pryce.webp',
+    image: {
+      src: '/images/athletes/nickisha-pryce.webp',
+      alt: 'Nickisha Pryce athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Nickisha%20Pryce',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '尼基莎·普莱斯',
     englishName: 'Nickisha Pryce',
     country: '牙买加',
@@ -1478,6 +1757,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'aaliyah-butler',
+    avatar: '/images/athletes/aaliyah-butler.jpg',
+    image: {
+      src: '/images/athletes/aaliyah-butler.jpg',
+      alt: 'Aaliyah Butler athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Aaliyah%20Butler',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '阿莉娅·巴特勒',
     englishName: 'Aaliyah Butler',
     country: '美国',
@@ -1524,6 +1812,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'gift-leotlela',
+    avatar: '/images/athletes/gift-leotlela.webp',
+    image: {
+      src: '/images/athletes/gift-leotlela.webp',
+      alt: 'Gift Leotlela athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Gift%20Leotlela',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '吉夫特·莱奥特莱拉',
     englishName: 'Gift Leotlela',
     country: '南非',
@@ -1572,6 +1869,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'ferdinand-omanyala',
+    avatar: '/images/athletes/ferdinand-omanyala.webp',
+    image: {
+      src: '/images/athletes/ferdinand-omanyala.webp',
+      alt: 'Ferdinand Omanyala athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Ferdinand%20Omanyala',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '费迪南德·奥马尼亚拉',
     englishName: 'Ferdinand Omanyala',
     country: '肯尼亚',
@@ -1623,6 +1929,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'kenneth-bednarek',
+    avatar: '/images/athletes/kenneth-bednarek.webp',
+    image: {
+      src: '/images/athletes/kenneth-bednarek.webp',
+      alt: 'Kenneth Bednarek athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Kenneth%20Bednarek',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '肯尼斯·贝德纳雷克',
     englishName: 'Kenneth Bednarek',
     country: '美国',
@@ -1676,6 +1991,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'trayvon-bromell',
+    avatar: '/images/athletes/trayvon-bromell.webp',
+    image: {
+      src: '/images/athletes/trayvon-bromell.webp',
+      alt: 'Trayvon Bromell athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Trayvon%20Bromell',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '特拉伊冯·布罗梅尔',
     englishName: 'Trayvon Bromell',
     country: '美国',
@@ -1725,6 +2049,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'anavia-battle',
+    avatar: '/images/athletes/anavia-battle.webp',
+    image: {
+      src: '/images/athletes/anavia-battle.webp',
+      alt: 'Anavia Battle athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Anavia%20Battle',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '阿纳维亚·巴特尔',
     englishName: 'Anavia Battle',
     country: '美国',
@@ -1773,6 +2106,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'collen-kebinatshipi',
+    avatar: '/images/athletes/collen-kebinatshipi.webp',
+    image: {
+      src: '/images/athletes/collen-kebinatshipi.webp',
+      alt: 'Collen Kebinatshipi athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Collen%20Kebinatshipi',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '科伦·凯比纳齐皮',
     englishName: 'Collen Kebinatshipi',
     country: '博茨瓦纳',
@@ -1819,6 +2161,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'muzala-samukonga',
+    avatar: '/images/athletes/muzala-samukonga.webp',
+    image: {
+      src: '/images/athletes/muzala-samukonga.webp',
+      alt: 'Muzala Samukonga athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Muzala%20Samukonga',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '穆扎拉·萨穆孔加',
     englishName: 'Muzala Samukonga',
     country: '赞比亚',
@@ -1866,6 +2217,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'zakithi-nene',
+    avatar: '/images/athletes/zakithi-nene.webp',
+    image: {
+      src: '/images/athletes/zakithi-nene.webp',
+      alt: 'Zakithi Nene athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Zakithi%20Nene',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '扎基蒂·内内',
     englishName: 'Zakithi Nene',
     country: '南非',
@@ -1916,6 +2276,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'kurtis-marschall',
+    avatar: '/images/athletes/kurtis-marschall.webp',
+    image: {
+      src: '/images/athletes/kurtis-marschall.webp',
+      alt: 'Kurtis Marschall athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Kurtis%20Marschall',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '库尔蒂斯·马歇尔',
     englishName: 'Kurtis Marschall',
     country: '澳大利亚',
@@ -1963,6 +2332,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'mattia-furlani',
+    avatar: '/images/athletes/mattia-furlani.webp',
+    image: {
+      src: '/images/athletes/mattia-furlani.webp',
+      alt: 'Mattia Furlani athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Mattia%20Furlani',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '马蒂亚·富拉尼',
     englishName: 'Mattia Furlani',
     country: '意大利',
@@ -2012,6 +2390,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'bozhidar-saraboyukov',
+    avatar: '/images/athletes/bozhidar-saraboyukov.webp',
+    image: {
+      src: '/images/athletes/bozhidar-saraboyukov.webp',
+      alt: 'Bozhidar Saraboyukov athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Bozhidar%20Saraboyukov',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '博日达尔·萨拉博尤科夫',
     englishName: 'Bozhidar Saraboyukov',
     country: '保加利亚',
@@ -2058,6 +2445,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'miltiadis-tentoglou',
+    avatar: '/images/athletes/miltiadis-tentoglou.jpg',
+    image: {
+      src: '/images/athletes/miltiadis-tentoglou.jpg',
+      alt: 'Miltiadis Tentoglou athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Miltiadis%20Tentoglou',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '米尔蒂亚迪斯·滕托格卢',
     englishName: 'Miltiadis Tentoglou',
     country: '希腊',
@@ -2110,6 +2506,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'tajay-gayle',
+    avatar: '/images/athletes/tajay-gayle.webp',
+    image: {
+      src: '/images/athletes/tajay-gayle.webp',
+      alt: 'Tajay Gayle athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Tajay%20Gayle',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '塔杰·盖尔',
     englishName: 'Tajay Gayle',
     country: '牙买加',
@@ -2157,6 +2562,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'yuliia-levchenko',
+    avatar: '/images/athletes/yuliia-levchenko.jpg',
+    image: {
+      src: '/images/athletes/yuliia-levchenko.jpg',
+      alt: 'Yuliia Levchenko athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Yuliia%20Levchenko',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '尤利娅·列夫琴科',
     englishName: 'Yuliia Levchenko',
     country: '乌克兰',
@@ -2204,6 +2618,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'iryna-gerashchenko',
+    avatar: '/images/athletes/iryna-gerashchenko.webp',
+    image: {
+      src: '/images/athletes/iryna-gerashchenko.webp',
+      alt: 'Iryna Gerashchenko athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Iryna%20Gerashchenko',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '伊琳娜·格拉先科',
     englishName: 'Iryna Gerashchenko',
     country: '乌克兰',
@@ -2254,6 +2677,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'kristjan-ceh',
+    avatar: '/images/athletes/kristjan-ceh.webp',
+    image: {
+      src: '/images/athletes/kristjan-ceh.webp',
+      alt: 'Kristjan Čeh athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Kristjan%20%C4%8Ceh',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '克里斯蒂安·切赫',
     englishName: 'Kristjan Čeh',
     country: '斯洛文尼亚',
@@ -2306,6 +2738,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'matthew-denny',
+    avatar: '/images/athletes/matthew-denny.jpg',
+    image: {
+      src: '/images/athletes/matthew-denny.jpg',
+      alt: 'Matthew Denny athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Matthew%20Denny',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '马修·丹尼',
     englishName: 'Matthew Denny',
     country: '澳大利亚',
@@ -2354,6 +2795,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'feng-bin',
+    avatar: '/images/athletes/feng-bin.jpg',
+    image: {
+      src: '/images/athletes/feng-bin.jpg',
+      alt: 'Feng Bin athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Feng%20Bin',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '冯彬',
     englishName: 'Feng Bin',
     country: '中国',
@@ -2404,6 +2854,15 @@ export const newAthletes: Athlete[] = [
   },
   {
     id: 'jorinde-van-klinken',
+    avatar: '/images/athletes/jorinde-van-klinken.webp',
+    image: {
+      src: '/images/athletes/jorinde-van-klinken.webp',
+      alt: 'Jorinde van Klinken athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Jorinde%20van%20Klinken',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '约琳德·范克林肯',
     englishName: 'Jorinde van Klinken',
     country: '荷兰',
@@ -2457,6 +2916,15 @@ export const newAthletes: Athlete[] = [
   // ============================================================
   {
     id: 'yan-ziyi',
+    avatar: '/images/athletes/yan-ziyi.webp',
+    image: {
+      src: '/images/athletes/yan-ziyi.webp',
+      alt: 'Yan Ziyi athlete portrait',
+      sourceName: 'Local image audit',
+      sourceUrl: 'https://worldathletics.org/search?q=Yan%20Ziyi',
+      usageStatus: 'pending',
+      notes: 'Image source recorded; visual identity checked against athlete name/profile or source page.',
+    },
     name: '严子怡',
     englishName: 'Yan Ziyi',
     country: '中国',

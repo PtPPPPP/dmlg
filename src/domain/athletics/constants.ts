@@ -1,5 +1,25 @@
 import type { EventCategory, StyleProfileKey } from './types';
 
+// Re-export ALL types so consumers can import everything from one place
+export type {
+  Athlete,
+  AthleteImage,
+  CompetitionResult,
+  DataMeta,
+  EventCategory,
+  Gender,
+  ImageUsageStatus,
+  MarkUnit,
+  PersonalBest,
+  ResultSource,
+  ResultSourceType,
+  SeasonBest,
+  StyleProfile,
+  StyleProfileKey,
+  TrackEvent,
+  VerificationStatus,
+} from './types';
+
 export const STYLE_LABELS: Record<StyleProfileKey, string> = {
   speed: '速度',
   endurance: '耐力',
@@ -41,15 +61,3 @@ export const EVENT_CATEGORY_TAG_CLASS: Record<EventCategory, string> = {
   combined: 'event-tag-sprint',
   other: 'event-tag-sprint',
 };
-
-/** 旧分类 → 新 EventCategory 映射 */
-export function mapLegacyCategory(cat: string): EventCategory {
-  const map: Record<string, EventCategory> = {
-    sprint: 'sprints',
-    distance: 'middle-distance',
-    hurdle: 'hurdles',
-    jump: 'jumps',
-    throw: 'throws',
-  };
-  return map[cat] ?? 'other';
-}

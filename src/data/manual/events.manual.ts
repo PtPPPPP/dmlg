@@ -4,14 +4,14 @@
  * ⚠️ 声明：项目描述为科普性质，技术细节来自公开田径教学资料。
  */
 
-import type { TrackEvent } from '../../types';
+import type { TrackEvent } from '../../domain/athletics/types';
 
 export const trackEvents: TrackEvent[] = [
   {
     id: '100m',
     name: '100 米',
     englishName: '100 Metres',
-    category: 'sprint',
+    category: 'sprints',
     gender: 'both',
     description:
       '100 米是田径最受关注的"飞人大战"，是纯粹速度的比拼。从起跑到冲线，运动员需要在 10 秒左右（男子）/ 11 秒以内（女子）完成比赛。它考验运动员的起跑反应、加速能力、最大速度和维持速度的能力。',
@@ -46,7 +46,7 @@ export const trackEvents: TrackEvent[] = [
     id: '200m',
     name: '200 米',
     englishName: '200 Metres',
-    category: 'sprint',
+    category: 'sprints',
     gender: 'both',
     description:
       '200 米结合了速度与弯道技术。运动员需要在弯道建立节奏，然后在直道全力冲刺。这条"半圈"的距离让比赛充满了战术和技术的变化。优秀的 200 米选手往往也是出色的 100 米选手。',
@@ -73,7 +73,7 @@ export const trackEvents: TrackEvent[] = [
     id: '400m',
     name: '400 米',
     englishName: '400 Metres',
-    category: 'sprint',
+    category: 'sprints',
     gender: 'both',
     description:
       '400 米是"长距离短跑"，也被称为最痛苦的项目之一。运动员需要在一圈跑道上全力冲刺，但又要合理分配体能。最后 100 米往往是"乳酸地狱"——双腿燃烧般的痛苦中咬牙坚持。',
@@ -100,7 +100,7 @@ export const trackEvents: TrackEvent[] = [
     id: '110mH',
     name: '110 米栏',
     englishName: '110 Metres Hurdles',
-    category: 'hurdle',
+    category: 'hurdles',
     gender: 'male',
     description:
       '110 米栏是速度与技术完美结合的项目。运动员需要在高速奔跑中跨越 10 个 1.067 米高的栏架。好的跨栏技术能最大限度地减少速度损失，让跨越栏架"像跑过去一样流畅"。',
@@ -128,7 +128,7 @@ export const trackEvents: TrackEvent[] = [
     id: '400mH',
     name: '400 米栏',
     englishName: '400 Metres Hurdles',
-    category: 'hurdle',
+    category: 'hurdles',
     gender: 'both',
     description:
       '400 米栏是田径中最考验全面能力的项目之一。它需要 400 米的速度耐力，同时还要在疲劳中精确跨越 10 个栏架。顶级 400 米栏选手往往也是出色的 400 米平跑选手。',
@@ -161,7 +161,7 @@ export const trackEvents: TrackEvent[] = [
     id: '800m',
     name: '800 米',
     englishName: '800 Metres',
-    category: 'distance',
+    category: 'middle-distance',
     gender: 'both',
     description:
       '800 米是"最短的中距离"，也是"最长的冲刺"。它要求运动员既有接近 400 米的速度，又有 1500 米的耐力。800 米的战术非常丰富——可以前领、可以跟跑、也可以最后冲刺。',
@@ -188,7 +188,7 @@ export const trackEvents: TrackEvent[] = [
     id: '1500m',
     name: '1500 米',
     englishName: '1500 Metres',
-    category: 'distance',
+    category: 'middle-distance',
     gender: 'both',
     description:
       '1500 米是"中距离之王"——战术性最强的田径项目之一。比赛约 3.75 圈，选手需要在速度和耐力之间找到完美平衡。1500 米的比赛节奏可以快如计时赛，也可以慢到变成一场"冲刺决斗"。',
@@ -216,7 +216,7 @@ export const trackEvents: TrackEvent[] = [
     id: '5000m',
     name: '5000 米',
     englishName: '5000 Metres',
-    category: 'distance',
+    category: 'long-distance',
     gender: 'both',
     description:
       '5000 米是长跑的"速度版本"——12.5 圈的比赛既需要超强的有氧基础，又能在最后阶段展现出惊人的速度。5000 米的战术变化丰富，可以全程快节奏甩开对手，也可以留到最后一圈决胜负。',
@@ -243,7 +243,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'high-jump',
     name: '跳高',
     englishName: 'High Jump',
-    category: 'jump',
+    category: 'jumps',
     gender: 'both',
     description:
       '跳高是最纯粹的身体对抗重力项目。运动员通过弧线助跑加速，在起跳点将水平速度转化为垂直高度，然后用背越式过杆。跳高的魅力在于：每次横杆升高，都在挑战人类极限。',
@@ -271,7 +271,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'pole-vault',
     name: '撑竿跳高',
     englishName: 'Pole Vault',
-    category: 'jump',
+    category: 'jumps',
     gender: 'both',
     description:
       '撑竿跳高是田径中最具视觉冲击力的项目之一。运动员手持一根约 5 米长的弹性撑竿，通过高速助跑、精准插竿，将自己"弹射"到空中，越过横杆。它是力量、速度、技巧和勇气的完美结合。',
@@ -299,7 +299,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'long-jump',
     name: '跳远',
     englishName: 'Long Jump',
-    category: 'jump',
+    category: 'jumps',
     gender: 'both',
     description:
       '跳远是最原始的田径项目之一——简单来说就是：助跑、起跳、在空中飞、尽可能远地落地。但简单的规则背后，是极其精细的技术要求。起跳板只有 20 厘米宽，踩过线即犯规。',
@@ -328,7 +328,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'triple-jump',
     name: '三级跳远',
     englishName: 'Triple Jump',
-    category: 'jump',
+    category: 'jumps',
     gender: 'both',
     description:
       '三级跳远是田径中最具节奏感的项目——单脚跳（hop）、跨步跳（step）、跳跃（jump），三跳连贯完成。它对运动员的节奏感、协调性和爆发力要求极高，常常被称为"田径中的舞蹈"。',
@@ -354,7 +354,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'shot-put',
     name: '铅球',
     englishName: 'Shot Put',
-    category: 'throw',
+    category: 'throws',
     gender: 'both',
     description:
       '铅球是最直接的"力量展示"项目。运动员在一个直径 2.135 米的投掷圈内，将 7.26kg（男子）/ 4kg（女子）的铅球推出，以球落地的最远点为成绩。从外表看是纯粹力量，但技术细节极其丰富。',
@@ -381,7 +381,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'javelin',
     name: '标枪',
     englishName: 'Javelin Throw',
-    category: 'throw',
+    category: 'throws',
     gender: 'both',
     description:
       '标枪是田径中最具"原始狩猎感"的项目。运动员手持一根 2.6-2.7 米的长枪，在 30+ 米长的助跑道上加速、引枪、出手——标枪在空中划出优美的弧线，飞向远处。',
@@ -409,7 +409,7 @@ export const trackEvents: TrackEvent[] = [
     id: '100mH',
     name: '100 米栏',
     englishName: '100 Metres Hurdles',
-    category: 'hurdle',
+    category: 'hurdles',
     gender: 'female',
     description:
       '女子 100 米栏是速度与技术的高度结合。与男子 110 米栏不同，女子栏高 0.838 米，距离缩短 10 米。10 个栏架、冲刺到终点——每一步都关乎分秒之争。顶级选手能在 12.5 秒以内完赛，跨栏动作流畅得像"跑过栏架"。',
@@ -437,7 +437,7 @@ export const trackEvents: TrackEvent[] = [
     id: '3000mSC',
     name: '3000 米障碍赛',
     englishName: '3000 Metres Steeplechase',
-    category: 'distance',
+    category: 'long-distance',
     gender: 'both',
     description:
       '3000 米障碍赛是田径中最"狂野"的项目。选手需要在 7.5 圈的赛跑中跨越 28 次栏架和 7 次水上障碍。水坑、栏架、泥泞 —— 这项源于英国越野赛马的项目充满了原始的运动魅力。',
@@ -464,7 +464,7 @@ export const trackEvents: TrackEvent[] = [
     id: '10000m',
     name: '10000 米',
     englishName: '10000 Metres',
-    category: 'distance',
+    category: 'long-distance',
     gender: 'both',
     description:
       '10000 米是田径场上最长的径赛项目 —— 整整 25 圈。这是一场关于耐心、战术和极限耐力的考验。选手们需要在接近 30 分钟的持续奔跑中保持专注和速度。好的万米比赛节奏感极强，每一圈的分段都经过精心计算。',
@@ -491,7 +491,7 @@ export const trackEvents: TrackEvent[] = [
     id: 'discus',
     name: '铁饼',
     englishName: 'Discus Throw',
-    category: 'throw',
+    category: 'throws',
     gender: 'both',
     description:
       '铁饼是田径中最古老的项目之一，可以追溯到古希腊奥运会。运动员在一个直径 2.5 米的投掷圈内，通过旋转将 2kg（男子）/ 1kg（女子）的铁饼抛出。铁饼飞行的优美弧线、全身旋转发力的技术美感，让这个项目充满了古典美学。',
