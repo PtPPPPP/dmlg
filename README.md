@@ -11,7 +11,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8.svg?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-[🌐 在线预览 / Live Demo](https://ptppppp.github.io/dmlg/) · [📦 REST API 后端](#后端-apiserver) · [📄 数据流说明](#数据流说明) · [❓ 常见问题](#常见问题-faq)
+[🌐 在线预览 / Live Demo](https://ptppppp.github.io/stdm/) · [📦 REST API 后端](#后端-apiserver) · [📄 数据流说明](#数据流说明) · [❓ 常见问题](#常见问题-faq)
 
 </div>
 
@@ -278,7 +278,7 @@ GitHub Actions 定时同步  →  自动生成 PR  →  人工核验来源和 pe
 
 ### GitHub Pages（主要）
 
-[`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) 在 `main` 分支推送时自动构建并部署到 GitHub Pages。CI 环境下 Vite 的 `base` 会自动设为 `/dmlg/`（见 `vite.config.ts`）。
+[`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) 在 `main` 分支推送时自动构建并部署到 GitHub Pages。CI 环境下 Vite 的 `base` 会自动设为 `/stdm/`（见 `vite.config.ts`）。
 
 ### Vercel
 

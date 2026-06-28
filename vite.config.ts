@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // vitest config — separate from defineConfig to avoid type conflict with tsc -b
 export default defineConfig({
-  // GitHub Pages 部署在 /dmlg/ 子路径;本地 / Vercel 用根路径。改仓库名需同步修改。
-  base: process.env.GITHUB_ACTIONS ? '/dmlg/' : '/',
+  // GitHub Pages 部署在 /stdm/ 子路径;本地 / Vercel 用根路径。改仓库名需同步修改。
+  base: process.env.GITHUB_ACTIONS ? '/stdm/' : '/',
   plugins: [react()],
   build: {
     rollupOptions: {

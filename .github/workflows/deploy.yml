@@ -28,7 +28,7 @@ jobs:
 
       - run: npm ci
 
-      # CI 下 GITHUB_ACTIONS=true，Vite base 自动用 /dmlg/（见 vite.config.ts）
+      # CI 下 GITHUB_ACTIONS=true，Vite base 自动用 /stdm/（见 vite.config.ts）
       - run: npm run build
 
       - uses: actions/configure-pages@v5
